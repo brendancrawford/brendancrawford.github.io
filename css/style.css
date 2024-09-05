@@ -1,0 +1,249 @@
+@font-face {
+    font-family: BSun;
+    src: url(BSun.ttf);
+}
+
+@font-face {
+    font-family: Creato;
+    src: url(Creato.otf);
+}
+
+@font-face {
+    font-family: CreatoBold;
+    src: url(CreatoBold.otf);
+}
+
+* {
+    margin: 0;
+    font-size: larger;
+    font-family: Creato;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: CreatoBold;
+    font-weight: bold;
+    margin: 10px;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 350px;
+
+}
+
+header {
+    text-align: center;
+    background-color:lightblue;
+    border-bottom: 2px solid cornflowerblue;
+}
+
+main {
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    text-align: left;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color:lightblue;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid cornflowerblue;
+    font-size: smaller;
+    width: 100%;
+}
+
+ol > li {
+    margin-left: 1em;
+    font-size: larger;
+}
+
+ol {
+    background-color: lightblue;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+table {
+    font-size:large;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    font-size: larger;
+}
+
+th {
+    background-color: lightblue;
+    color:black;
+    padding: 15px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+input {
+    background-color: lightblue;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    font-size: larger;
+}
+button {
+    background-color: yellow;
+    border: 2px solid black;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: larger;
+}
+
+input:hover {
+    background-color: lime;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: lime;
+    font-weight: bold;
+}
+
+#create {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+#results {
+    text-align: center;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: cornflowerblue;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    font-weight: 300;
+    padding: 5px;
+}
+
+a:hover {
+    font-weight: bold;
+    background-color: antiquewhite;
+}
+
+.tutorialImg {
+    width: 30vw;
+}
+
+.mainLogo {
+    width: 50vw;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    * {
+        font-size: 2.7vw;
+    }
+
+    .mainLogo {
+        width: 90vw;
+    }
+
+}
+  
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    * {
+        font-size: 2.9vw;
+    }
+
+    .mainLogo {
+        width: 80vw;
+    }
+
+}
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    * {
+        font-size: 2.5vw;
+    }
+
+    .mainLogo {
+        width: 60vw;
+    }
+
+} 
+  
+/* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+
+    * {
+        font-size: 2.3vw;
+    }
+
+    .mainLogo {
+        width: 40vw;
+    }
+} 
+  
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    * {
+        font-size: 1.6vw;
+    }
+
+    .mainLogo {
+        width: 35vw;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1500px) {
+
+    * {
+        font-size: 1.25vw;
+    }
+
+    .mainLogo {
+        width: 30vw;
+    }
+
+}
+
+
+

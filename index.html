@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>TunesRnkr</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script>
+            //FOUC fix for firefox browsers 
+            let a=0;
+        </script>
+
+        <link rel="icon" href="img/TunesRnkrNote.ico">
+    </head>
+
+    <body>
+        
+        <header>
+            <br>
+            <img class="mainLogo" src="img/TunesRnkrLogo.png">   
+            <br>
+            <label>By Brendan</label>
+            <br><br>
+            <nav>
+                <a href="index.html">Rnkr</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
+
+        <main>
+
+            <script src="js/app.js" defer></script>
+
+            <br>
+
+            <div style="text-align: center; display: flex; align-items: center; vertical-align: middle;">
+
+                <div>
+                    <p>The Way We Rate:</p>
+                    <br>
+                    <p style="color: red ;">Terrible</p>
+                    <p style="color:rgb(189, 52, 47);">Bad</p>
+                    <p style="color: orangered">Not Great</p>
+                    <p style="color:orange;">Below Average</p>
+                    <p style="color: yellow;">Mediocre</p>
+                    <p style="color: rgb(216, 233, 27);">Alright</p>
+                    <p style="color: yellowgreen;">Decent</p>
+                    <p style="color: rgb(136, 226, 26);">Great</p>
+                    <p style="color: rgb(23, 215, 23);">Amazing</p>
+                    <p style="color: green;">Perfect</p>
+                    <br>
+                    <label>Where will your artist place?</label>
+                </div>
+
+                <div>
+                    <h1 style="text-align: center; font-size: larger;">Welcome</h1>
+                    <br><br>
+                    <label>
+                        Using this web app you are able to Rnk a music artists discogrpahy,<br> 
+                        and discover the <span style="font-family: CreatoBold;">TRUE</span>
+                        overall Rnk of that artist, in your eyes.<br>
+                        This web app exports and reads txt files! if these files are tampered with,<br>
+                        the web app may not act as expected.
+                    </label>
+                    <br><br>
+                    <p>Already have a Rnkr txt document started? Click below to upload.</p>
+                    <br>
+                    <input type="file" id="upload">
+                    <br>
+                    <label style="color: green" id="success1">Successfully imported! Scroll Down!</label>
+                    <br><br>
+                </div>
+                
+            </div>
+
+            <br>
+            <hr>
+            <br><br>
+
+            <h1>Start a new Rnkr!</h1>
+            <input type="text" placeholder=" Artist Name" id="artistName">
+            <button id="start">Start</button>
+            <br>
+            <label id="error" style="color: red;">Field cannot be empty!</label>
+            <br><br><br>
+
+            <hr>
+
+            <br><br>
+
+            <div id="create">
+
+                <h1 id="createTitle"></h1>
+                <input type="text" id="albumTitle" placeholder=" Album Title">
+                <button id="createAlbum">Add Album</button>
+                <br><br>
+                <input type="text" id="songTitle" placeholder=" Song Title"> <br>
+                <input type="number" id="songRanking" placeholder=" Song Score">
+                <label for="songRanking">ex. <span style="font-weight: bold; color: red;">75</span> / 100</label> <br>
+                <input type="number" id="albumId" placeholder=" Album ID"> <br>
+                <button id="createSong">Add Song</button> <label style="color: green" id="success2">Successfully added</label>
+                <br><br>
+                <label id="error2" style="color: red;">Invalid field input. Please try again.</label>
+
+                <hr> 
+
+                <div id="albums"></div>
+
+                <br><br>
+
+                <label for="btnResults">Finished?</label>
+                <button id="btnResults">Get Results</button>
+                <br><br>
+                <label for="btnExport">Save for later?</label>
+                <button id="btnExport">Export</button>
+
+                <br><br>
+
+            </div>
+
+            <div id="results">
+
+                <br><br><br>
+
+                <hr>
+
+                <div id="artistScoreTitle"></div>
+                <div id="artistScoreLbl"></div><label> / 100</label>
+                <div id="subTitle"></div>
+                <br><br>
+                <div id="topSongsTbl"></div>
+                <br><br>
+                <div id="topAlbumsTbl"></div>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+            <br><br>
+            <img style="width: 200px;" src="img/TunesRnkr.png">
+            <label>Tunes Rnkr 2024<br>Website made by: Brendan Crawford</label>
+            <br><br>
+            <img style="width: 100px;" src="img/TunesRnkrNote.png">
+            <br><br>
+
+        </footer>
+
+    </body>
+
+    
+
+</html>
