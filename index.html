@@ -91,27 +91,58 @@
 
             <div id="create">
 
-                <h1 id="createTitle"></h1>
-                <input type="text" id="albumTitle" placeholder=" Album Title"><br>
-                <button id="createAlbum">Add Album</button>
+                <label>
+                    <span style="font-weight: bold; color: red;">Made an error?</span><br>
+                    Use the create fields below then instead of clicking the "Add" button, click the "Edit" button in this form. This will edit your
+                    already added songs and albums at the Album ID / Song ID specified. Only fill the field you want to change in the create form (cannot edit Album ID for songs).
+                </label>
+
                 <br><br>
-                <input type="text" id="songTitle" placeholder=" Song Title"> <br>
-                <input type="number" id="songRanking" placeholder=" Song Score">
-                <label for="songRanking">ex. <span style="font-weight: bold; color: red;">75</span> / 100</label> <br>
-                <input type="number" id="albumId" placeholder=" Album ID"> <br>
-                <button id="createSong">Add Song</button> <br><br>
+
+                <div style="display: flex; align-items: center;">
+
+                    <div>
+                        <input type="number" id="albumChangeId" placeholder=" Edit Album ID..."><br>
+                        <button id="changeAlbum">Edit Album...</button>
+                    </div>
+
+                    <div>
+                        <input type="number" id="songChangeId" placeholder=" Edit Song ID..."><br>
+                        <input type="number" id="songChangeAlbumId" placeholder=" ...at Album ID..."><br>
+                        <button id="changeSong">Edit Song...</button>
+                    </div>
+
+                </div>
+
+                <br><hr><br>
+
+                <h1 style="font-size:larger;" id="createTitle"></h1>
+
+                <div style="display: flex; align-items: center;">
+
+                    <div>
+
+                        <input type="text" id="albumTitle" placeholder=" Album Title"><br>
+                        <button id="createAlbum">Add Album</button>
+
+                    </div>
+
+                    <div>
+
+                        <input type="text" id="songTitle" placeholder=" Song Title"> <br>
+                        <input type="number" id="songRanking" placeholder=" Song Score"><br>
+                        <label for="songRanking">ex. <span style="font-weight: bold; color: red;">75</span> / 100</label> <br>
+                        <input type="number" id="albumId" placeholder=" Album ID"> <br>
+                        <button id="createSong">Add Song</button>
+
+                    </div>
+
+                </div>
+                
+                
                 <label style="color: green" id="success2">Successful</label><br>
                 <label id="error2" style="color: red;">Invalid field input. Please try again.</label>
-                <br>
-                <hr> 
-                <br>
-                <label><span style="font-weight: bold; color: red;">Made an error?</span> Use the input fields above to change, Album Title, Song Title, or Song Score. Then enter the below Album ID and Song ID if applicable and click the appropriate "Change" button.</label><br><br>
-                <input type="number" id="albumChangeId" placeholder=" Change Album ID..."><br>
-                <button id="changeAlbum">Change Album...</button>
-                <br><br>
-                <input type="number" id="songChangeId" placeholder=" Change Song ID..."><br>
-                <input type="number" id="songChangeAlbumId" placeholder=" ...at Album ID..."><br>
-                <button id="changeSong">Change Song...</button>
+                
                 <br><br>
 
                 <hr> 
@@ -139,10 +170,14 @@
                 <div id="artistScoreTitle"></div>
                 <div id="artistScoreLbl"></div><label> / 100</label>
                 <div id="subTitle"></div>
-                <br><br>
-                <div id="topSongsTbl"></div>
-                <br><br>
-                <div id="topAlbumsTbl"></div>
+                <div style="display: flex; align-items: center;">
+
+                    <div id="topSongsTbl"></div>
+
+                    <div id="topAlbumsTbl"></div>
+
+                </div>
+
 
             </div>
 

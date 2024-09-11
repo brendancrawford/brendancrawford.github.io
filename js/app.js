@@ -56,6 +56,7 @@ window.onload = (event) => {
 
     create.style.display = 'none';
     divResults.style.display = 'none';
+    albums.style.display = 'none';
     error.style.visibility = 'hidden';
     error2.style.visibility = 'hidden';
     upload.value = null;
@@ -174,6 +175,9 @@ window.onload = (event) => {
 
         }
 
+
+        albums.style.display = 'block';
+
         upload.value = null;
         flashError(success1);
 
@@ -208,6 +212,8 @@ window.onload = (event) => {
 
         else {
 
+            albums.style.display = 'none';
+            divResults.style.display = 'none';
             discography = [];
             refreshDiscography();
 
@@ -227,6 +233,10 @@ window.onload = (event) => {
         }
 
         else {
+
+            if (discography.length === 0) {
+                albums.style.display = 'block';
+            }
 
             discography.push([albumTitle.value, []]);
             refreshDiscography();
@@ -341,7 +351,7 @@ window.onload = (event) => {
         tempString = '<ol>';
         for (let i = 0; i < discography.length; i++) {
         
-            tempString += "<li><span style='font-weight:bold'>" + discography[i][0] + "</span>";
+            tempString += "<li style='text-align:left;'><span style='font-weight:bold;'>" + discography[i][0] + "</span>";
                     
             // Don't look for songs if there aren't any.
             if (discography[i][1].length > 0) {
@@ -381,8 +391,8 @@ window.onload = (event) => {
 
         scoreColour(artistScore);
 
-        topSongsTbl.innerHTML = tableMaker(topSongs, newArtistName + " Songs Ranked");
-        topAlbumsTbl.innerHTML = tableMaker(topAlbums, newArtistName + " Albums Ranked");
+        topSongsTbl.innerHTML = tableMaker(topSongs, newArtistName + " <span style='color:blue; font-size: larger;'>Songs</span> Ranked");
+        topAlbumsTbl.innerHTML = tableMaker(topAlbums, newArtistName + " <span style='color:blue; font-size: larger;'>Albums</span> Ranked");
 
     }
 

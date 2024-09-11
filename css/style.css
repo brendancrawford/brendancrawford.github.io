@@ -1,9 +1,4 @@
 @font-face {
-    font-family: BSun;
-    src: url(BSun.ttf);
-}
-
-@font-face {
     font-family: Creato;
     src: url(Creato.otf);
 }
@@ -62,8 +57,12 @@ footer {
 }
 
 ol > li {
-    margin-left: 1em;
+    margin-left: 1.5em;
     font-size: larger;
+}
+
+li {
+    text-align: center;
 }
 
 ol {
@@ -76,8 +75,9 @@ ol {
 
 table {
     font-size:large;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5px;
+    border: 1px solid #ddd;
+    vertical-align: top;
 }
 
 th, td {
@@ -90,7 +90,7 @@ th, td {
 th {
     background-color: lightblue;
     color:black;
-    padding: 15px;
+    padding: 5px;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -109,6 +109,7 @@ input {
     margin: 10px;
     font-size: larger;
     cursor: pointer;
+    width: 32vw;
 }
 button {
     background-color: yellow;
@@ -200,7 +201,7 @@ a:hover {
 @media only screen and (min-width: 768px) {
 
     * {
-        font-size: 2.5vw;
+        font-size: 2.3vw;
     }
 
     .mainLogo {
