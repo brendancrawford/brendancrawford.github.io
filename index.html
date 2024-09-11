@@ -92,16 +92,27 @@
             <div id="create">
 
                 <h1 id="createTitle"></h1>
-                <input type="text" id="albumTitle" placeholder=" Album Title">
+                <input type="text" id="albumTitle" placeholder=" Album Title"><br>
                 <button id="createAlbum">Add Album</button>
                 <br><br>
                 <input type="text" id="songTitle" placeholder=" Song Title"> <br>
                 <input type="number" id="songRanking" placeholder=" Song Score">
                 <label for="songRanking">ex. <span style="font-weight: bold; color: red;">75</span> / 100</label> <br>
                 <input type="number" id="albumId" placeholder=" Album ID"> <br>
-                <button id="createSong">Add Song</button> <label style="color: green" id="success2">Successfully added</label>
-                <br><br>
+                <button id="createSong">Add Song</button> <br><br>
+                <label style="color: green" id="success2">Successful</label><br>
                 <label id="error2" style="color: red;">Invalid field input. Please try again.</label>
+                <br>
+                <hr> 
+                <br>
+                <label><span style="font-weight: bold; color: red;">Made an error?</span> Use the input fields above to change, Album Title, Song Title, or Song Score. Then enter the below Album ID and Song ID if applicable and click the appropriate "Change" button.</label><br><br>
+                <input type="number" id="albumChangeId" placeholder=" Change Album ID..."><br>
+                <button id="changeAlbum">Change Album...</button>
+                <br><br>
+                <input type="number" id="songChangeId" placeholder=" Change Song ID..."><br>
+                <input type="number" id="songChangeAlbumId" placeholder=" ...at Album ID..."><br>
+                <button id="changeSong">Change Song...</button>
+                <br><br>
 
                 <hr> 
 

@@ -27,6 +27,14 @@ window.onload = (event) => {
     let success1 = document.getElementById('success1');
     let success2 = document.getElementById('success2');
 
+    let changeSong = document.getElementById('changeSong');
+    let songChangeId = document.getElementById('songChangeId');
+    let songChangeAlbumId = document.getElementById('songChangeAlbumId');
+
+    let changeAlbum = document.getElementById('changeAlbum');
+    let albumChangeId = document.getElementById('albumChangeId');
+
+
     let fr = new FileReader();
     let newArtistName = "";
     let albumCount = -1;
@@ -252,6 +260,76 @@ window.onload = (event) => {
         songTitle.value = "";
         songRanking.value = "";
         albumId.value = "";
+
+    }
+
+    function onSongChange() {
+
+        if (songChangeId.value === "" || songChangeAlbumId.value === "") {
+            flashError(error2);
+        } 
+
+        else {
+
+            try {
+
+                if (songTitle.value != "") {
+
+                    discography[parseInt(songChangeAlbumId.value) - 1][1][parseInt(songChangeId.value) - 1][0] = songTitle.value;
+
+                }
+
+                if (songRanking.value != "") {
+
+
+                    discography[parseInt(songChangeAlbumId.value) - 1][1][parseInt(songChangeId.value) - 1][1] = songRanking.value;
+
+                }
+
+                flashError(success2);
+
+            } catch (e) {
+                flashError(error2);
+            }
+
+        }
+
+        refreshDiscography();
+
+        songTitle.value = "";
+        songRanking.value = "";
+        albumId.value = "";
+
+        songChangeId.value = "";
+        songChangeAlbumId.value = "";
+
+    }
+
+    function onAlbumChange() {
+
+        if (albumTitle.value === "" || albumChangeId.value === "") {
+            flashError(error2);
+        } 
+
+        else {
+
+            try {
+
+                discography[parseInt(albumChangeId.value) - 1][0] = albumTitle.value;
+
+                flashError(success2);
+
+            } catch (e) {
+                flashError(error2);
+            }
+
+        }
+
+        refreshDiscography();
+
+        albumTitle.value = "";
+
+        albumChangeId.value = "";
 
     }
 
@@ -500,6 +578,8 @@ window.onload = (event) => {
     createAlbum.addEventListener('click', addAlbum);
     createSong.addEventListener('click', addSong);
     btnExport.addEventListener('click', onExport);
+    changeSong.addEventListener('click', onSongChange);
+    changeAlbum.addEventListener('click', onAlbumChange);
     
 
 };
